@@ -59,7 +59,6 @@ class VisEditor extends Component {
     };
 
     if (!this.props.vis.isEditorMode()) {
-      if (!this.props.vis.params || !this.props.visData) return null;
       const reversed = this.state.reversed;
       return (
         <Visualization
@@ -76,7 +75,7 @@ class VisEditor extends Component {
 
     const { model } = this.state;
 
-    if (model && this.props.visData) {
+    if (model) {
       return (
         <div className="vis_editor">
           <VisPicker
